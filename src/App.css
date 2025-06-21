@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  background-color: aqua;
+  width: 100vw;
+  height: 100vh;
+}
+
+.AppContainer {
+  padding: 40px;
+  width: 100%;
+  background-color: rgb(225, 235, 244);
+  display: flex;
+}

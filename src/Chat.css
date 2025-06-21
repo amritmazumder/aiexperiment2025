@@ -1,0 +1,132 @@
+/* Main chat container styling */
+.chat-container {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+/* Chat history section styling */
+.chat-history {
+ 
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Individual message styling */
+.chat-message {
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  max-width: 75%;
+}
+
+/* User message specific styling */
+.chat-message.user {
+  background: #e0f7fa;
+  align-self: flex-end;
+  font-family: sans-serif;
+}
+
+/* Bot message specific styling */
+.chat-message.bot {
+  background: #e8eaf6;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: monospace;
+}
+
+/* Input form styling */
+.chat-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 100%;
+}
+
+/* Input field styling */
+.chat-input input {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid #bbb;
+  font-size: large;
+  
+}
+
+.chat-input input:focus {
+  outline: none;
+  
+}
+
+/* Send button styling */
+.chat-input button {
+  padding: 1rem;
+  border-radius: 0px 0px 8px 8px;
+  border: none;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+}
+
+/* Disabled button styling */
+.chat-input button:disabled {
+  background: #90caf9;
+  cursor: not-allowed;
+}
+
+/* Loading indicator animation */
+.loading-dots {
+  display: inline-block;
+  animation: loading 1.5s infinite;
+}
+
+.loading-dots::after {
+  content: '...';
+  animation: dots 1.5s infinite;
+}
+
+/* Loading dots animation keyframes */
+@keyframes dots {
+  0%, 20% { content: '.'; }
+  40% { content: '..'; }
+  60%, 100% { content: '...'; }
+}
+
+/* Loading message styling */
+.chat-message.bot.loading {
+  background: #f0f0f0;
+  font-style: italic;
+  color: #666;
+}
+
+/* Think content section styling */
+.think-content {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-left: 3px solid #6c757d;
+  font-size: 0.9em;
+  color: #7b8187;
+  font-size: small;
+  font-family: monospace;
+  border-radius: 4px;
+}
+
+/* Think content header styling */
+.think-content strong {
+  color: #343a40;
+} 
